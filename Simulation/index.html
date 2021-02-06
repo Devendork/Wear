@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Wear Force Capture Simulation</title>
+	    <style>
+
+        @keyframes reveal {
+          from {opacity: 0%;}
+          to {opacity: 100%;}
+        }
+
+        @keyframes hide {
+          from {opacity: 100%;}
+          to {opacity: 0%;}
+        }
+
+        body{
+          background-color: #333;
+          background-image: url('img/background.png');
+          background-repeat: no-repeat;
+          color: #888;
+          font-family: sans-serif;
+        }
+
+        #frames{
+          position: relative;
+          top: 640px;
+
+        }
+
+        .bobbles{
+          position: absolute;
+          color: #fff;
+          font-size: 6em;
+          opacity: 0%;
+        }
+
+
+
+        #bobble0{
+          top: 150px;
+          left: 730px;
+        }
+
+
+        #bobble1{
+          top: 280px;
+          left: 660px;
+        }
+
+        #bobble2{
+          top: 400px;
+          left: 730px;
+        }
+
+        #bobble3{
+          top: 380px;
+          left: 550px;
+        }
+
+
+        #bobble4{
+          top: 160px;
+          left: 570px;
+        }
+
+
+        #bobble5{
+          top: 380px;
+          left: 420px;
+        }
+
+        #bobble6{
+          top: 270px;
+          left: 500px;
+        }
+
+        #bobble7{
+          top: 150px;
+          left: 420px;
+        }
+
+        #bobble8{
+          top: 380px;
+          left: 200px;
+        }
+
+        #bobble9{
+          top: 200px;
+          left: 200px;
+        }
+
+        #bobble0f{
+          top: 30px;
+          left: 780px;
+        }
+
+
+        #bobble1f{
+          top: 200px;
+          left: 850px;
+        }
+
+        #bobble2f{
+          top: 200px;
+          left: 940px;
+        }
+
+        #bobble3f{
+          top: 350px;
+          left: 940px;
+        }
+
+        #bobble4f{
+          top: 350px;
+          left: 840px;
+        }
+
+
+        #bobble5f{
+          top: 550px;
+          left: 780px;
+        }
+
+        #bobble6f{
+          top: 450px;
+          left: 1200px;
+        }
+
+        #bobble7f{
+          top: 300px;
+          left: 1100px;
+        }
+
+       #bobble8f{
+          top: 140px;
+          left: 1220px;
+        }
+
+        #bobble9f{
+          top: 450px;
+          left: 1450px;
+        }
+
+        #bobble10f{
+          top: 150px;
+          left: 1450px;
+        }
+
+
+        h2{
+          font-size: 1em;
+          display: block;
+          clear: both;
+        }
+
+        h3{
+          font-size: .8em;
+          display: block;
+          clear: both;
+        }
+
+        #renderArea{
+          background-image: url('img/background.png')
+          padding-top:40px;
+          width:100%;
+          float: left;
+        }
+
+        #controls{
+          left:66%;
+          width:30%;
+          padding-top:40px;
+          display: block;
+          float: left;
+        }
+
+        #canvas{
+          display:none;
+          background-color:#eeeeee;
+        }
+
+
+
+        .layer,
+        .control_section{
+          padding:16px 8px;
+          display:block;
+          clear:both;
+        }
+
+        #instructions_block{
+          padding:16px 8px;
+          display:block;
+          clear:both;
+        }
+
+        #instructions_block input{
+          width: 100%;
+        }
+
+        .layer img{
+          width: 70px;
+          float: left;
+          border:thin solid #333;
+          margin: 8px;
+          display:block;
+        }
+
+        .layer_options{
+          display: block;
+          float: left;
+          width:66%;
+          
+        }
+
+        #controls input,
+        #controls select{
+          width: 90%;
+        }
+
+
+        .third_width{
+          width:32%;
+          float: left;
+        }
+        .half_width{
+          width:50%;
+          float: left;
+        }
+
+        .full_width{
+          width: 50%;
+        }
+
+
+        .my_label{
+          font-size: 0.7em;
+          display: block;
+          text-transform: uppercase;
+        }
+
+    </style>
+
+
+    </head>
+  <body>
+
+  
+  
+
+
+  <div id="renderArea">
+
+
+    <div id="bobble0" class="bobbles">•</div>
+    <div id="bobble1" class="bobbles">•</div>
+    <div id="bobble2" class="bobbles">•</div>
+    <div id="bobble3" class="bobbles">•</div>
+    <div id="bobble4" class="bobbles">•</div>
+    <div id="bobble5" class="bobbles">•</div>
+    <div id="bobble6" class="bobbles">•</div>
+    <div id="bobble7" class="bobbles">•</div>
+    <div id="bobble8" class="bobbles">•</div>
+    <div id="bobble9" class="bobbles">•</div>
+
+    <div id="bobble0f" class="bobbles">•</div>
+    <div id="bobble1f" class="bobbles">•</div>
+    <div id="bobble2f" class="bobbles">•</div>
+    <div id="bobble3f" class="bobbles">•</div>
+    <div id="bobble4f" class="bobbles">•</div>
+    <div id="bobble5f" class="bobbles">•</div>
+    <div id="bobble6f" class="bobbles">•</div>
+    <div id="bobble7f" class="bobbles">•</div>
+    <div id="bobble8f" class="bobbles">•</div>
+    <div id="bobble9f" class="bobbles">•</div>
+    <div id="bobble10f" class="bobbles">•</div>
+
+
+  </div>
+
+  <div id = "frames">
+    <span id="frame_num"></span> / <span id="frame_count"></span><br>
+    <span id="date"></span><br>
+    <span id="speed"></span>
+  </div>
+
+  <!-- <div id = "controls">
+
+
+
+  <div id = "weave_settings" class="control_section">
+    <h2>Files</h2>
+
+    <input type="button" id="update" value="File 1" onclick="playFile(1)" />
+    <input type="button" id="update" value="File 2" onclick="playFile(2)" />
+    
+
+
+    <h2>Animation Settings</h2>
+      <div id="knot_settings">
+       <span class="my_label">Frame Rate (1 file read / x seconds) </span><div id = "rate"></div>
+       <span class="my_label">Cycles</span><div id = "cycles"></div> 
+      </div>
+
+
+
+  </div> -->
+</div>
+
+
+
+  </div>
+    <script src="lib/jquery-1.7.1.min.js"></script>
+
+    <!-- Custom code -->
+    <script src="data.js"></script>
+    <script src="ui.js"></script>
+    <script src="animatefile.js"></script>
+     
+     </body>
+</html>

@@ -1,0 +1,36 @@
+Density: 30 epi
+PPI: 18. 
+
+Draft is a 2pic system, meaning one inch is 48 draft rows. The first pic (from bottom) is the system for traces and bobbles, the second from the bottom is the base fabric. 
+
+Base Fabric: 
+Black Silk
+Every 96th row, the weaver throws single shuttle of akagi silk
+Supplemental Akagi silk warp every 60 pics from the start
+
+Traces + Bobbles
+Ground and Power will be reprresented by black/grey cord respectively. All Analog selectoins will be white 30 AWG silicone. 
+
+Bobbles are hand integrated in regions marked by all warps being raised. Manually pass under in order to bind into fabric. 
+
+Each bobble system has a connection to POWER -> thermo -> A0 -> sensor -> GND. The A0 pin is always opposte the ground and power. 
+
+Leave all traces long at ends for simplified connecting. 
+
+Hardware:
+1 x Power supply to barrel jack connection
+X x Barrel Jack Extensions
+1 x On/Off Switch Connected to Barrel Jack 
+1 x Barrel Jack Connected to Lilypad basic PCB
+
+2 X AdaFruit Buck/Boost Power Converters output to JST connection
+2 X Lipo Batteries (for wearing period)
+2 X AdaFruit MicroSD Card Reader
+2 X Arduino Pro Mini (3 or 5 Volt)
+2 X Analog MUX Units (16 outputs)
+21 X MOSFET NPN Transistors
+21 X 330 Ohm Rresistors
+
+Snaps for Alternating Connections  
+
+ 
